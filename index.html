@@ -6,17 +6,131 @@
   <title>LapFix - Laptop Repairing Center, Gaya</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    body { background-image: url(full.png);font-family: Arial, sans-serif; margin: 0; padding: 0; background-image: #f1efef; }
-    header { background-color: #8a97aa; color: white; padding: 20px; text-align: center; }
-    nav { background: #3c56ce; padding: 10px; text-align: center; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-    section { padding: 40px; background: rgb(230, 219, 219); margin: 20px auto; max-width: 1000px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    .services ul { list-style: none; padding: 0; }
-    .services li { padding: 10px 0; }
-    footer { text-align: center; background: #4e71a0; color: white; padding: 20px; margin-top: 40px; }
-    .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
-    .contact-form button { background: #27ae60; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
-    .contact-form button:hover { background: #219150; }
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f1efef url("full.png") no-repeat center top;
+      background-size: cover;
+    }
+
+    header {
+      background-color: #8a97aa;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: #3c56ce;
+      padding: 15px 0;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px;
+      background: rgb(230, 219, 219);
+      margin: 40px auto;
+      max-width: 1000px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    section[id] {
+      scroll-margin-top: 100px; /* fixes hidden content issue */
+    }
+
+    .brand-logos img {
+      margin: 5px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 20px 0;
+    }
+
+    .service-item {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .service-item img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 8px;
+    }
+
+    .caption {
+      margin-top: 15px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .caption strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #000;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      background: #27ae60;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #219150;
+    }
+
+    footer {
+      text-align: center;
+      background: #4e71a0;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -33,120 +147,79 @@
   </nav>
 
   <section id="about">
-  <h2>About Us</h2>
-  <p>
-    <h4>Lapfix Your Trusted Laptop Repair Partner in Gaya</h4>
+    <h2><img width="200" src="lapfixlogo.png" alt="Lap" title="lapfix" /> About Us</h2>
+    <h4>LapFix – Your Trusted Laptop Repair Partner in Gaya</h4>
+    <p>
+      <strong>At LapFix</strong>, we understand how essential your laptop is to your daily life. Whether you're a student, a working professional, or a business owner, a malfunctioning device can disrupt everything.
+      That's why we offer fast, affordable, and expert laptop & computer repair services right here in Gaya.
+      Our certified technicians handle everything from screen and battery replacements to chip-level motherboard repairs.
+    </p>
+    <div class="brand-logos">
+      <img width="100" src="dell.png" alt="Dell" />
+      <img width="100" src="hp.png" alt="HP" />
+      <img width="100" src="acer.png" alt="Acer" />
+      <img width="100" src="asus.png" alt="Asus" />
+      <img width="100" src="len.png" alt="Lenovo" />
+      <img width="100" src="apple.png" alt="Apple" />
+      <img width="100" src="msi.png" alt="MSI" />
+      <img width="100" src="sam.png" alt="Samsung" />
+      <img width="100" src="mi.png" alt="Mi" />
+    </div>
+  </section>
 
-<strong>At LapFix</strong> ,we understand how essential your laptop is to your daily life. Whether you're a student, a working professional, or a business owner, a malfunctioning device can disrupt everything. That's why we offer fast, affordable, and expert laptop & computer repair services right here in Gaya. Our certified technicians handle everything from screen and battery replacements to chip-level motherboard repairs. With a strong reputation for trust, transparency, and timely service, LapFix is the name Gaya relies on. Visit us and experience hassle free repairs that "get your device and your life back on track"!
-  </p>
-  <div class="brand-logos">
-    <img src="dell.png" alt="Dell" title="Dell" />
-    <img src="hp.png" alt="HP" title="HP" />
-    
-    <img src="acer.png" alt="Acer" title="Acer" />
-    <img src="asus.png" alt="Asus" title="Asus" />
-    <img src="apple.png" alt="Apple" title="Apple" />
-  </div>
-</section>
-
-
-  <style>
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 20px 0;
-  }
-
-  .service-item {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;
-    padding: 20px;
-  }
-
-  .service-item img {
-    width: 100%;
-    max-width: 250px;
-    border-radius: 8px;
-  }
-
-  .caption {
-    margin-top: 15px;
-    font-size: 15px;
-    color: #333;
-  }
-
-  .caption strong {
-    display: block;
-    margin-bottom: 5px;
-    color: #000;
-  }
-</style>
-
-<section id="services" class="services">
-  <h2 style="text-align: center;">Our Services</h2>
-  <div class="services-grid">
-
-    <div class="service-item">
-      <img src="screen.jpg" alt="Screen Replacement">
-      <div class="caption">
-        <strong>✅ Screen Replacement</strong>
-        Fixing or replacing cracked, flickering, or unresponsive laptop screens with genuine parts.
+  <section id="services">
+    <h2 style="text-align: center;">Our Services</h2>
+    <div class="services-grid">
+      <div class="service-item">
+        <img src="screen.jpg" alt="Screen Replacement">
+        <div class="caption">
+          <strong>✅ Screen Replacement</strong>
+          Fixing or replacing cracked, flickering, or unresponsive laptop screens with genuine parts.
+        </div>
+      </div>
+      <div class="service-item">
+        <img src="batt.jpg" alt="Battery & Charger Issues">
+        <div class="caption">
+          <strong>✅ Battery & Charger Issues</strong>
+          Diagnosing and replacing faulty batteries or chargers.
+        </div>
+      </div>
+      <div class="service-item">
+        <img src="keybord.jpg" alt="Keyboard & Touchpad Repairs">
+        <div class="caption">
+          <strong>✅ Keyboard & Touchpad Repairs</strong>
+          Repairing or replacing non-working keys or unresponsive touchpads.
+        </div>
+      </div>
+      <div class="service-item">
+        <img src="moth.jpg" alt="Motherboard Repair">
+        <div class="caption">
+          <strong>✅ Motherboard & Chip Level Services</strong>
+          Chip-level diagnostics to fix booting/display/power issues.
+        </div>
+      </div>
+      <div class="service-item">
+        <img src="img1.jpg" alt="Data Recovery">
+        <div class="caption">
+          <strong>✅ Data Recovery & OS Installation</strong>
+          Recovering lost data & installing OS (Windows/Linux).
+        </div>
+      </div>
+      <div class="service-item">
+        <img src="vir.jpg" alt="Antivirus Setup">
+        <div class="caption">
+          <strong>✅ Antivirus & Software Setup</strong>
+          Installing antivirus and essential software.
+        </div>
       </div>
     </div>
-
-    <div class="service-item">
-      <img src="batt.jpg" alt="Battery & Charger Issues">
-      <div class="caption">
-        <strong>✅ Battery & Charger Issues</strong>
-        Diagnosing and replacing faulty batteries or chargers for longer power backup and safe charging.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <img src="keybord.jpg" alt="Keyboard & Touchpad Repairs">
-      <div class="caption">
-        <strong>✅ Keyboard & Touchpad Repairs</strong>
-        Repairing or replacing non-working keys or unresponsive touchpads to restore full input functionality.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <img src="moth.jpg" alt="Motherboard Repair">
-      <div class="caption">
-        <strong>✅ Motherboard & Chip Level Services</strong>
-        Advanced diagnostics and chip-level repairs to fix booting, display, or power issues.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <img src="img1.jpg" alt="Data Recovery">
-      <div class="caption">
-        <strong>✅ Data Recovery & OS Installation</strong>
-        Recovering lost data and installing/reinstalling operating systems like Windows/Linux.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <img src="vir.jpg" alt="Antivirus Setup">
-      <div class="caption">
-        <strong>✅ Antivirus & Software Setup</strong>
-        Installing antivirus and essential software for system protection and performance.
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
+  </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>Address: Bindeswari Ghat ke gali me, near HP petrol pump, Kirani Ghat, Gaya, Bihar 823001</p>
-    <p>Phone: +91-82946 88660</p>
-    <p>Email: support@lapfixgaya.in</p>
+    <p><strong>Address:</strong> Bindeswari Ghat ke gali me, near HP petrol pump, Kirani Ghat, Gaya, Bihar 823001</p>
+    <p><strong>Phone:</strong> +91-82946 88660</p>
+    <p><strong>Email:</strong> support@lapfixgaya.in</p>
     <div class="contact-form">
       <input type="text" placeholder="Your Name" />
       <input type="email" placeholder="Your Email" />
@@ -156,8 +229,10 @@
   </section>
 
   <footer>
-  <p>Link for official website: &nbsp;<a href="https://www.justdial.com/Gaya/Lapfix-Laptop-Repairing-Near-Riverside-HP-Petrol-Pump-Kirani-Ghat/9999PX631-X631-230702112523-F1C3_BZDET" target="_blank" style="color: #fff; text-decoration: underline;">LapFixGaya</a></p>
-</footer>
+    <p>Official Site: 
+      <a href="https://www.justdial.com/Gaya/Lapfix-Laptop-Repairing-Near-Riverside-HP-Petrol-Pump-Kirani-Ghat/9999PX631-X631-230702112523-F1C3_BZDET" target="_blank">LapFix Gaya</a>
+    </p>
+  </footer>
 
 </body>
 </html>
